@@ -17,6 +17,12 @@ var home = require('./routes/home');
 var mycloset = require('./routes/mycloset');
 var viewcloset = require('./routes/viewcloset');
 var tops = require('./routes/tops');
+var outfits = require('./routes/outfits');
+
+var viewoutfits = require('./routes/viewoutfits');
+var createoutfit = require('./routes/createoutfit');
+var category = require ('./routes/category');
+var settings = require('./routes/settings');
 
 var app = express();
 
@@ -49,6 +55,12 @@ app.get('/home', home.view);
 app.get('/mycloset', mycloset.view);
 app.get('/viewcloset', viewcloset.view);
 app.get('/tops', tops.view);
+app.get('/outfits', outfits.view);
+
+app.get('/viewoutfits', viewoutfits.view);
+app.get('/createoutfit', createoutfit.view);
+app.get('/category', category.view);
+app.get('/settings', settings.view); 
 
 // Example route
 // app.get('/users', user.list);

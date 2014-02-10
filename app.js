@@ -11,7 +11,12 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var project = require('./routes/project');
 // Example route
-// var user = require('./routes/user');
+var login = require('./routes/login');
+var signup = require('./routes/signup');
+var home = require('./routes/home');
+var mycloset = require('./routes/mycloset');
+var viewcloset = require('./routes/viewcloset');
+var tops = require('./routes/tops');
 
 var app = express();
 
@@ -37,7 +42,14 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/login', login.view);
 app.get('/project/:name', project.viewProject);
+app.get('/signup', signup.view);
+app.get('/home', home.view);
+app.get('/mycloset', mycloset.view);
+app.get('/viewcloset', viewcloset.view);
+app.get('/tops', tops.view);
+
 // Example route
 // app.get('/users', user.list);
 

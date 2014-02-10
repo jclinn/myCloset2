@@ -19,20 +19,27 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Dosis:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+    function LoginForm(){
+        window.location.href='/login';
+    }
+</script>
 </head>
 
 <body>
 	<div class="container">
           <h1 class="logo" >MY CLOSET</h1>
+
 		<!-- this is a comment in HTML -->
 		<div class="container">
 			<div class="formatcenter">
-				<a href="login.handlebars" class="btn btncolor">LOGIN</a>
+				<a onclick="LoginForm()" class="btn btncolor">LOGIN</a>
 			</div>
 	   </div>
         <div class="container">
       <div class="formatcenter">
-        <a href="signup.html" class="btn btncolor">SIGN UP</a>
+        <a href="/signup" class="btn btncolor">SIGN UP</a>
       </div>
      </div>
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
